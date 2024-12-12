@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="nav-div w-full h-[0vh] bg-black absolute top-0 left-0 z-[99] overflow-hidden">
+        <div class="w-full bg-black">
+          <div class="px-4 sm:px-10 py-2 flex items-center justify-between text-xl sm:text-2xl">
+            <img
+              class="w-[80px] sm:w-[100px] mix-blend-lighten contrast-200"
+              src="../public/bg-image.png"
+              alt=""
+            />
+            <i class="ri-close-large-line text-yellow-600 close cursor-pointer"></i>
+          </div>
+          <div class="flex gap-4 sm:gap-8 items-start justify-center mx-4 sm:mx-10 list-none text-4xl sm:text-6xl lg:text-8xl mt-3 font-bold flex-col">
+            <li class="translate-y-[1.5rem] opacity-0 hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)]   items-list ">Home</li>
+            <li class="translate-y-[1.5rem] opacity-0 hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)]  items-list ">Playground</li>
+            <li class="translate-y-[1.5rem] opacity-0 hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)]  items-list ">Download</li>
+            <li class="translate-y-[1.5rem] opacity-0 hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)]  items-list ">Contact</li>
+          </div>
+        </div>
+      
+    </div>
+    <div class="main w-full">
+      <nav class="w-full fixed top-0 left-0 px-10 py-2 flex justify-between items-center">
+        <div>
+          <img
+            class="w-[100px] mix-blend-lighten contrast-200"
+            src="../public/bg-image.png"
+            alt=""
+          />
+        </div>
+      
+        <!-- Nav items (hidden below 690px) -->
+        <div class="flex gap-4 sm:gap-8 justify-between list-none text-base sm:text-lg font-bold  max-[690px]:hidden md:flex">
+          <li class="hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] z-[11] ">Home</li>
+          <li class="hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] ">Playground</li>
+          <li class="hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] ">Download</li>
+          <li class="hover:text-yellow-400 hover:scale-110 transition-all duration-300 text-yellow-400 hover:drop-shadow-[0_0_10px_rgba(250,204,21,0.7)] ">Contact</li>
+        </div>
+      
+        <!-- Hamburger icon (visible below 690px) -->
+        <div class="nav-icon block max-[690px]:block md:hidden cursor-pointer">
+          <i class="ri-menu-3-line text-2xl text-yellow-600"></i>
+        </div>  
+      </nav>
+      
+      <div class="w-full h-screen overflow-hidden">
+        <img
+          class="absolute h-[50%] sm:h-[65%] lg:h-[75%] w-[75%] sm:w-[65%] lg:w-[55%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-lighten contrast-200 z-[1]"
+          src="./public/bg-image.png"
+          alt=""
+        />
+        <canvas class="canvas z-50"></canvas>
+        <div class="w-96 h-96 bg-yellow-500 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[404px]   z-[-1]"></div>
+      </div>
+      <div class="main-footer w-full min-h-screen bg-black relative flex items-center justify-center px-4 py-8">
+          <div class="footer text-4xl sm:text-6xl lg:text-8xl font-bold h-[26px] translate-y-3/4 overflow-hidden opacity-0">
+            <h1 class="mb-6 sm:mb-10 uppercase"><span class="font-extrabold text-yellow-500">PLAYER</span>unknown</h1>
+            <h1 class="ml-0 sm:ml-14 lg:ml-28 uppercase leading-normal sm:leading-3"><span class="text-[#B60000] font-extrabold">Battel</span> Ground</h1>
+          </div>
+          <div class="absolute bottom-4 sm:bottom-11 right-3 developed text-sm sm:text-base">
+            <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>d</span> <span>B</span><span>y</span> <span>I</span><span>N</span><span>A</span><span>M</span>      </div>
+            <div class="absolute bluurr top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-yellow-700 blur-[200px]"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
